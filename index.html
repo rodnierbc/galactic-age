@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Galactic Age</title>
+    <link rel="stylesheet" href="build/assets/css/vendor.min.css">
+    <link rel="stylesheet" href="build/assets/css/app.css">
+    <script src="build/assets/js/vendor.min.js"></script>
+    <script type="text/javascript" src="build/assets/js/app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+              <h3 class="panel-title">User Information</h3>
+          </div>
+          <div class="panel-body">
+              <form action="" method="post" id="galacticAgeCalculatorForm">
+                <div class="row">
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label>Name</label>
+                          <input id="name" name="name" class="form-control" type="text">
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label>Birthday</label>
+                          <input id="birthday" name="birthday" class="form-control" type="date">
+                      </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Select a Planet</label>
+                      <select class="form-control" id="planet">
+                        <option value="0">Earth</option>
+                        <option value="1">Mercury</option>
+                        <option value="2">Venus</option>
+                        <option value="3">Mars</option>
+                        <option value="4">Jupiter</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Select Life Expectancy by Continent</label>
+                      <select class="form-control" id="lifeExpectancy">
+                        <option value="80">Northern America</option>
+                        <option value="79">Europe</option>
+                        <option value="78">Oceania</option>
+                        <option value="76">Latin America</option>
+                        <option value="73">Asia</option>
+                        <option value="72">worldwide</option>
+                        <option value="62">Africa</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <input type="submit" class="form-control btn btn-info center-block" value="Find your Age">
+                        </div>
+                    </div>
+                </div>
+              </form>
+          </div>
+      </div>
+      <div class="modal fade" id="myModal" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"><span id="modalTitle"></span></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class='jumbotron'>
+                <div class="row">
+                   <p>In this planet you are <span id="age"></span> years old.</p>
+                </div>
+                <div class="row">
+                  <p><span id="lifeExp"></span></p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
